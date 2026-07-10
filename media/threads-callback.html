@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Threads OAuth Callback</title>
+<style>body{font-family:sans-serif;max-width:640px;margin:60px auto;padding:0 16px}code{background:#f4f4f4;padding:8px 12px;display:block;word-break:break-all;border-radius:6px;font-size:14px}</style>
+</head>
+<body>
+<h2>Threads 認可コード</h2>
+<p>このコードをコピーして Claude Code に渡してください（自動でも読み取られます）。</p>
+<code id="c">(コードなし — URLに ?code= がありません)</code>
+<script>
+const p = new URLSearchParams(location.search);
+const code = p.get('code');
+if (code) { document.getElementById('c').textContent = code; document.title = 'CODE:' + code.slice(0, 12); }
+</script>
+</body>
+</html>
